@@ -5,13 +5,6 @@ on:
     types: [assigned, opened, synchronize, reopened]
 
 jobs:
-    name: auto-assign
-    runs-on: ubuntu-18.04
-    steps:
-      - uses: actions/labeler@v2
-        with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-
     name: verify
     runs-on: ubuntu-18.04
     steps:
