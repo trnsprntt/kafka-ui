@@ -5,7 +5,14 @@ on:
     types: [opened, labeled, unlabeled, synchronize]
 
 jobs:
-  triage:
+    name: auto-assign
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/labeler@v2
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+    name: verify
     runs-on: ubuntu-18.04
     steps:
       - uses: zwaldowski/match-label-action@v2

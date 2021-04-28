@@ -1,0 +1,12 @@
+theme:build:
+  - ".github/**"
+  - "pom.xml"
+
+theme:code:
+  - "kafka-ui-*"
+
+#theme:tests:
+
+theme:documentation:
+  - "README.md"
+
