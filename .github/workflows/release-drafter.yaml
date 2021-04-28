@@ -1,0 +1,20 @@
+name: Create draft release
+
+on:
+  release:
+    type: [create, release, edited]
+
+jobs:
+  update_draft_release:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: release-drafter/release-drafter@v5
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  
+  change_version:
+
+  
+  create_artifacts:
+
+
