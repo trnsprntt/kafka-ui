@@ -2,7 +2,8 @@ name: Verify labels
 
 on:
   pull_request:
-    types: [assigned, opened, synchronize, reopened]
+    branches: [ master ]
+#    types: [assigned, opened, synchronize, reopened]
 
 jobs:
     name: verify
@@ -10,4 +11,4 @@ jobs:
     steps:
       - uses: zwaldowski/match-label-action@v2
         with:
-          allowed: 'type:fix, type:features, type:documentation, type:tests, type:config'
+          allowed: 'type:fix, type:Feature, type:documentation, type:tests, type:config'
