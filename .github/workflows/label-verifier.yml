@@ -2,8 +2,7 @@ name: Verify labels
 
 on:
   pull_request:
-    branches: [ master ]
-#    types: [assigned, opened, synchronize, reopened]
+    types: [assigned, opened, synchronize, reopened]
 
 jobs:
     name: verify
