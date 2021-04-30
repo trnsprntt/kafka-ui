@@ -5,9 +5,9 @@ on:
     types: [assigned, opened, synchronize, reopened]
 
 jobs:
-    name: verify
-    runs-on: ubuntu-18.04
-    steps:
-      - uses: zwaldowski/match-label-action@v2
-        with:
-          allowed: 'type:fix, type:Feature, type:documentation, type:tests, type:config'
+  name: verify
+  runs-on: ubuntu-18.04
+  steps:
+    - uses: zwaldowski/match-label-action@v2
+      with:
+        allowed: 'type:fix, type:Feature, type:documentation, type:tests, type:config'
